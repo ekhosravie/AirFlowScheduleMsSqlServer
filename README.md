@@ -1,1 +1,2 @@
 # AirFlowScheduleMsSqlServer
+This code uses Airflow to create a DAG that runs a SQL Server script every day at midnight. The SQL Server script is stored in a separate file and read by the MsSqlOperator, which connects to a SQL Server database and executes the script. The mssql_conn_id parameter specifies the connection id for the database, which can be set in the Airflow UI under Admin -> Connections. The schedule_interval parameter uses a cron expression to define the frequency of the DAG run.
